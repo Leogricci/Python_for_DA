@@ -49,6 +49,7 @@ class JobPost:
         self.title = title
         self.location = location
         self.salary = salary
+# self is the reference to the current object, letting a method access and modify that specific instance’s data.
 
 # Creates an instance of the JobPost class and gives it the attributes we passed (location, title, salary)
 job_1 = JobPost(job_title2, job_location2, job_salary2)
@@ -77,3 +78,68 @@ class StudentInfo:
     
 student_1 = StudentInfo(major, grade, gpa)
 student_1.display_info()
+
+
+# A very nice command is help() you can use on an object, function, or anything to get some info
+
+
+## Data types
+
+# Make an int into a float 
+float_number = float(102)
+
+## Strings
+
+# First of all, .ToString() in python is just str():
+x = 42
+s = str(x)
+print(s)
+print(type(s))
+
+"strings can be defined with double quotes"
+'or with simple quotes'
+
+# Built in methods with string
+
+skill = "Python"
+
+# ToUpper and ToLower
+skill_upper = skill.upper()
+print(skill_upper)
+
+skill_lower = skill.lower()
+print(skill_lower)
+
+# Replace letter occurences
+skill_replace = skill.replace('P', 'F')
+print(skill_replace)
+
+job_name = "Data Analyst"
+job_name_replace = job_name.replace('a', 'o', 2)
+print(job_name_replace)
+
+# Split!!!!!!!!!!!!!
+job_name_split = job_name.split(' ')
+print(job_name_split)
+# It splits the string at the specified separator (here empty string) and stores it in an array (job_name_split)
+
+
+## Magic methods also know as dunder methods (double underscore methods)
+
+# Here are the way they work
+# __add__ merges first argument (self) with the second argument
+str_add = str.__add__("Data", " Analyst")
+print(str_add)
+# Another possible syntax
+str_add_2 = "Data".__add__(" Analyst")
+print(str_add_2)
+
+# However that is not hos we use them. Most of these dunder methods have been overriden to allow us to use them through operators
+# Here __add__ was overriden to all for us to just use the '+' operator to concatenate
+str_add_override = "Data" + " Analyst"
+print(str_add_override)
+
+# Here is teh length function
+print("Data Analyst".__len__())
+# here is the overriden version
+print(len("Data Analyst"))
