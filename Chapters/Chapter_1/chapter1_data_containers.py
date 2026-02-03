@@ -50,7 +50,6 @@ print(skills_list[:])
 print(skills_list[::2])
 
 
-# 
 luke_skills = ['python', 'bigquery', 'r']
 kelly_skills = ['python', 'sql', 'looker']
 
@@ -87,6 +86,62 @@ element_keep, *element_discard = elements_list
 # A list is mutable. This means it can be modified after being created (opposite of readonly in C#)
 
 
+########################################################################################################################
+
+
 ## Dictionaries
-# Stores pairs of keys and data. Contains one key per element
+# Stores pairs of keys and values. Contains one key per value
 # Synatx: dictionary = {'key_1': 'element_1', 'key_2': 'element_2', 'key_3': 'element_3'}
+# Keys can be almost any data types (but have to be hashable), values can be whatever type they want
+
+data_dictionary = {
+    'analyst_tool': 'sap', 
+    'dabatbases': 'sql', 
+    'programming': ['python', 'excel'], 
+    'min_age': 25
+}
+print(data_dictionary)
+
+
+job_type_skills = {
+    'database': 'postgres',
+    'language': 'python',
+    'library': 'pandas'
+}
+
+# Get help on dictionary function: 
+# help(dict)
+
+# We can use dictionary[key] to get the value associated with the key
+print(job_type_skills['database']) # prints 'postgres'
+
+# To get a list of all the keys do:
+print(job_type_skills.keys())
+
+# To get a list of all the values:
+print(job_type_skills.values())
+
+
+# We can removes values from dictionary using pop(key)
+job_type_skills.pop('library')
+print(job_type_skills)
+
+
+# We can also add values using update({key: value})
+job_type_skills.update({'cloud': 'google drive'})
+print(job_type_skills)
+
+# We can do the same thing using the [] notation. It's just like in C#!!
+job_type_skills['version_control'] = 'git'
+print(job_type_skills)
+
+
+# Dictionary allow duplicate values but NO duplicate keys. Dictionaries are mutable.
+
+
+########################################################################################################################
+
+
+## Sets
+
+
