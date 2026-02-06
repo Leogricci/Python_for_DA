@@ -155,3 +155,84 @@ while count < 5:
     count += 1
 
 
+# Example with dictionary
+experience = {
+    'Luke': 3,
+    'Kelly': 6,
+    'Ken': 4,
+    'Alex': 7
+}
+
+# Convert dictionary in list to use it in a loop
+years_list = list(experience.items())
+
+years = 0
+index = 0
+while index < 4:
+    key, years = years_list[index]
+    if years >= 5:
+        print(key, years)
+    index += 1
+
+
+
+## List Comprehension
+
+# This will create a list with numbers 0-99
+# It is saying: for each x between 1 and 100, append x to the list
+numbers = [x for x in range(100)]
+print(numbers)
+
+# It is the simplified version of the following
+numbers_2 = []
+for i in range(100):
+    numbers_2.append(i)
+
+print(numbers_2)
+
+# The first version is much more simple
+# We can even do operations on the elments we add.
+# Here, each value that is being added to the list (0-99) is multiplied by 2
+numbers_3 = [x * 2 for x in range(100)]
+print(numbers_3)
+
+# It works with any kind of operation
+# Converting to a float for example
+numbers_4 = [float(x) for x in range(100)]
+print(numbers_4)
+
+
+# This works for any type of iterable objects nut just loops (works with strings, dictionaries, sets, ...)
+letters = [x for x in 'PYTHON']
+print(letters)
+
+
+# And of course it works with any type of data container (list, dictionaries, sets, tuples, ...)
+# here we do it with a set (to have the set of letters in the word 'character)
+letters_set = {x for x in 'CHARACTER'}
+print(letters_set)
+
+
+# Let's look at a practical example
+
+# We have a big list of jobs and want to retrieve the ones who contain 'data analyst'
+job_list = [
+    "software engineer",
+    "data analyst",
+    "financial analyst",
+    "product manager",
+    "junior data analyst",
+    "economist",
+    "business analyst",
+    "data scientist",
+    "marketing data analyst",
+    "operations manager"
+]
+
+# For that we can add an if condition to the list comprehension
+
+analyst_list = [job for job in job_list if 'data analyst' in job]
+print(analyst_list)
+
+
+
