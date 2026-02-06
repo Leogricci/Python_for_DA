@@ -144,4 +144,16 @@ print(job_type_skills)
 
 ## Sets
 
+# Sets are similar to lists but instead of using [] they use {}.
+# Also, sets don't allow duplicates so if you transform a list into a set it will remove duplicates
+
+skills_set = {'tableau', 'sql', 'python', 'statistics'}
+print(skills_set)
+# See that items get reotganized when printing (supposed to be lphabetical order but don't count on it)
+
+# Add and remove from set (doesn't add if duplicate)
+skills_set.add('looker')
+skills_set.add('sql')
+skills_set.remove('tableau')
+print(skills_set)
 
