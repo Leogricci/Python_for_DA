@@ -148,3 +148,45 @@ print(list(filter(lambda job: job['remote'] == True and 'Python' in job['job_ski
 
 
 ## Modules
+
+# Modules are existing functions we import in our program to use them
+
+# Let's create a simple module:
+    # First create a new python file in your folder
+    # Write code (like functions) in that file
+    # import the module file where you want to use it using: import module_file
+    # You can use it by calling it with the dot notation
+
+
+import my_module
+
+print(my_module.skill_list)
+
+# you can use an alias to shorten the call name
+import my_module as md
+print(md.skill_list)
+
+# But using modules for list and variables is not interesting. They become powerful when used with functions
+
+# here we import a modeule that contains functions and we call the functions using the dot notation
+import function_module as fm
+
+print(fm.skill('Python'))
+print(fm.skill('Excel'))
+print(fm.skill('Java'))
+
+
+# A module can contain many functions, you just have to call them using the right names
+# Let's look at a more concrete example using another module
+
+import job_analyzer as ja
+
+print(ja.calculate_salary(100000))
+
+print(ja.salary_check(110000))
+print(ja.salary_check(90000))
+
+
+# We can also import just one of the functions from the module so that we don't have to use the dot notation
+from job_analyzer import calculate_salary
+print(calculate_salary(100000))
