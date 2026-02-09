@@ -186,7 +186,34 @@ print(ja.calculate_salary(100000))
 print(ja.salary_check(110000))
 print(ja.salary_check(90000))
 
+print(ja.calculate_bonus(110000, 100000))
 
-# We can also import just one of the functions from the module so that we don't have to use the dot notation
-from job_analyzer import calculate_salary
+# We can also import just one (or more) of the functions from the module so that we don't have to use the dot notation
+from job_analyzer import calculate_salary, calculate_bonus
 print(calculate_salary(100000))
+print(calculate_bonus(125000, 100000))
+
+# To import all the fuctions from a module use the *
+from job_analyzer import *
+
+
+# We can use the help function to get help on the fuctions from the module
+# If I want to provide information on my functions, I can use a doc string (muli-line comment) 
+# in the module and it will appear when the help function is ran
+#help(calculate_salary)
+# Press 'q' to exit help menu
+
+
+# If you look at python library, you can see all the modules that are availables and their descriptions (and all the info you need)
+# If you have a specific need, look in there and find the one you need, then you just have to import it
+
+
+# Let's take a look at some of them. 
+# Statistics module
+
+import statistics as st
+
+salaries = [89000, 100000, 45000, 98000, 140000]
+
+mean_salary = st.mean(salaries)
+print(mean_salary)
